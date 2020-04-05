@@ -1,4 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setting up dev Environment
+Run:
+
+### npm install 
+### npm install gulp
+### npm install fomantic-ui
+### npm install semantic-ui-react
+
+This should set up your node modules needed to run this locally.
 
 ## Available Scripts
 
