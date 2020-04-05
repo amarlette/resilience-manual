@@ -56,9 +56,9 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
     <Button.Group size='large'>
-    <Button>Mental Maintenance</Button>
+    <Button color="yellow">Mental Maintenance</Button>
     <Button.Or />
-    <Button>Get Outside Help</Button>
+    <Button color="blue">Get Outside Help</Button>
   </Button.Group>
   </Container>
 );
@@ -107,9 +107,9 @@ class DesktopContainer extends Component {
                 <Menu.Item as={Link} to="/home" active>
                   Home
                 </Menu.Item>
+                <Menu.Item as={Link} to="#aboutus">About Us</Menu.Item>
                 <Menu.Item as={Link} to="/mentalmaintenance">Mental Maintenance</Menu.Item>
-              <Menu.Item as={Link} to="/outsidehelp">Outside Help</Menu.Item>
-                <Menu.Item as="a">Careers</Menu.Item>
+                <Menu.Item as={Link} to="/outsidehelp">Outside Help</Menu.Item>
                 <Menu.Item position="right">
                 <Button color='red'>Emergency Resources</Button>
                   
@@ -161,9 +161,10 @@ class MobileContainer extends Component {
             <Menu.Item as={Link} to="/" active>
               Home
             </Menu.Item>
+            <Menu.Item as={Link} to="#aboutus">About Us</Menu.Item>
             <Menu.Item as={Link} to="/mentalmaintenance">Mental Maintenance</Menu.Item>
             <Menu.Item as={Link} to="/outsidehelp">Outside Help</Menu.Item>
-            <Menu.Item as="a">Careers</Menu.Item>
+            
             <Menu.Item as="a">Emergency Resources</Menu.Item>
             </Router>
           </Sidebar>
