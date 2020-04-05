@@ -19,6 +19,15 @@ import {
   Visibility
 } from "semantic-ui-react";
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
+
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
@@ -27,7 +36,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as="h1"
-      content="Imagine-a-Company"
+      content="Georgia Tech Mental Health Manual"
       inverted
       style={{
         fontSize: mobile ? "2em" : "4em",
@@ -38,7 +47,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as="h2"
-      content="Do whatever you want when you want to."
+      content="Built by Georgia Tech Students for Georgia Tech Students"
       inverted
       style={{
         fontSize: mobile ? "1.5em" : "1.7em",
@@ -46,10 +55,11 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? "0.5em" : "1.5em"
       }}
     />
-    <Button primary size="huge">
-      Get Started
-      <Icon name="right arrow" />
-    </Button>
+    <Button.Group size='large'>
+    <Button>Mental Maintenance</Button>
+    <Button.Or />
+    <Button>Get Outside Help</Button>
+  </Button.Group>
   </Container>
 );
 
@@ -78,6 +88,7 @@ class DesktopContainer extends Component {
           onBottomPassed={this.showFixedMenu}
           onBottomPassedReverse={this.hideFixedMenu}
         >
+          
           <Segment
             inverted
             textAlign="center"
@@ -92,25 +103,18 @@ class DesktopContainer extends Component {
               size="large"
             >
               <Container>
-                <Menu.Item as="a" active>
+              <Router>
+                <Menu.Item as={Link} to="/home" active>
                   Home
                 </Menu.Item>
-                <Menu.Item as="a">Work</Menu.Item>
-                <Menu.Item as="a">Company</Menu.Item>
+                <Menu.Item as={Link} to="/mentalmaintenance">Mental Maintenance</Menu.Item>
+              <Menu.Item as={Link} to="/outsidehelp">Outside Help</Menu.Item>
                 <Menu.Item as="a">Careers</Menu.Item>
                 <Menu.Item position="right">
-                  <Button as="a" inverted={!fixed}>
-                    Log in
-                  </Button>
-                  <Button
-                    as="a"
-                    inverted={!fixed}
-                    primary={fixed}
-                    style={{ marginLeft: "0.5em" }}
-                  >
-                    Sign Up
-                  </Button>
+                <Button color='red'>Emergency Resources</Button>
+                  
                 </Menu.Item>
+                </Router>
               </Container>
             </Menu>
             <HomepageHeading />
@@ -153,14 +157,15 @@ class MobileContainer extends Component {
             vertical
             visible={sidebarOpened}
           >
-            <Menu.Item as="a" active>
+            <Router>
+            <Menu.Item as={Link} to="/" active>
               Home
             </Menu.Item>
-            <Menu.Item as="a">Work</Menu.Item>
-            <Menu.Item as="a">Company</Menu.Item>
+            <Menu.Item as={Link} to="/mentalmaintenance">Mental Maintenance</Menu.Item>
+            <Menu.Item as={Link} to="/outsidehelp">Outside Help</Menu.Item>
             <Menu.Item as="a">Careers</Menu.Item>
-            <Menu.Item as="a">Log in</Menu.Item>
-            <Menu.Item as="a">Sign Up</Menu.Item>
+            <Menu.Item as="a">Emergency Resources</Menu.Item>
+            </Router>
           </Sidebar>
 
           <Sidebar.Pusher
@@ -180,12 +185,7 @@ class MobileContainer extends Component {
                     <Icon name="sidebar" />
                   </Menu.Item>
                   <Menu.Item position="right">
-                    <Button as="a" inverted>
-                      Log in
-                    </Button>
-                    <Button as="a" inverted style={{ marginLeft: "0.5em" }}>
-                      Sign Up
-                    </Button>
+                  <Button color='red'>Emergency Resources</Button>
                   </Menu.Item>
                 </Menu>
               </Container>
@@ -353,5 +353,22 @@ const HomepageLayout = () => (
     </Segment>
   </ResponsiveContainer>
 );
+
+
+function About() {
+  return (
+    <div>
+      <h2>About</h2>
+    </div>
+  );
+}
+
+function Dashboard() {
+  return (
+    <div>
+      <h2>Dashboard</h2>
+    </div>
+  );
+}
 
 export default HomepageLayout;
