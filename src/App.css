@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+body {
+  color: rgb(85, 85, 85);
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ui.inverted.pointing.menu .active.item:after {
+  background-color: white !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* blockquote styles comes from bootstrap */
+blockquote {
+  padding: 0.6rem 1rem 0.4rem;
+  margin: 0 0 0.8rem;
+  border-left: 5px solid #eeeeee;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+blockquote p {
+  line-height: 1.2rem;
+  margin-bottom: 0.3rem;
+  text-align: start !important;
 }
-
-.App-link {
-  color: #61dafb;
+blockquote p:last-child {
+  margin-bottom: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+blockquote ul:last-child,
+blockquote ol:last-child {
+  margin-bottom: 0;
+}
+blockquote footer,
+blockquote small,
+blockquote .small {
+  margin-bottom: 0.5rem;
+  display: block;
+  font-size: 80%;
+  line-height: 1.42857;
+  color: #999;
+  padding: 0;
+}
+blockquote footer:before,
+blockquote small:before,
+blockquote .small:before {
+  content: "— ";
+}
+blockquote cite:before {
+  content: "«";
+}
+blockquote cite:after {
+  content: "»";
 }
