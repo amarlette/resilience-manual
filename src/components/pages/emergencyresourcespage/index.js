@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 
+
 import "../../../../node_modules/semantic-ui-css/semantic.min.css";
 
 import {withRouter} from 'react-router';
@@ -10,6 +11,7 @@ import {
     Container,
     Divider,
     Grid,
+    Card,
     Header,
     Icon,
     Image,
@@ -33,13 +35,16 @@ import ResponsiveContainer from "../../containers/responsive-container";
 
 export class EmergencyResourcesPage extends React.Component {
 
+
     render() {
         return (
             <ResponsiveContainer>
                 <h2>Emergency Resources Page!</h2>
+
             </ResponsiveContainer>
         )
     }
 }
 
 export default withRouter(EmergencyResourcesPage);
+
