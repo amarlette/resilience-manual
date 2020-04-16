@@ -32,17 +32,20 @@ import Homepage from './components/pages/homepage';
 import AboutUspage from './components/pages/aboutuspage';
 import MentalMaintenancepage from './components/pages/mentalmaintenancepage';
 import OutsideHelppage from './components/pages/outsidehelppage';
-
+import EmergencyResourcesPage from './components/pages/emergencyresourcespage'
 
 export default class App extends React.Component {
 
   render() {
     return (
       <Router>
-        <Route exact path='/' component={Homepage}/>
-        <Route path='/aboutus' component={AboutUspage}/>
-        <Route path='/mentalmaintenance' component={MentalMaintenancepage}/>
-        <Route path='/outsidehelp' component={OutsideHelppage}/>
+        <Switch>
+          <Route path='/' exact component={Homepage}/>
+          <Route path='/aboutus' component={AboutUspage}/>
+          <Route path='/mentalmaintenance' component={MentalMaintenancepage}/>
+          <Route path='/outsidehelp' component={OutsideHelppage}/>
+          <Route path='/emergencyresources' component={EmergencyResourcesPage}/>
+        </Switch>
       </Router>
     )
   }
