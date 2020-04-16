@@ -33,19 +33,18 @@ import {
 } from "react-router-dom";
 import ResponsiveContainer from "../../containers/responsive-container";
 
+export class EmergencyResourcesPage extends React.Component {
 
-export class emergencyresourcespage extends React.Component {
 
     render() {
         return (
             <ResponsiveContainer>
-                <Container text style={{ marginTop: "4em" }}>
-                    <Header as="h1">Emergency Resources</Header>
-                    
-                </Container>
+                <h2>Emergency Resources Page!</h2>
+
             </ResponsiveContainer>
         )
     }
 }
 
-export default withRouter(emergencyresourcespage);
+export default withRouter(EmergencyResourcesPage);
+

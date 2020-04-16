@@ -24,6 +24,7 @@ import {
   Switch,
   Route,
   Link,
+  NavLink,
   useRouteMatch,
   useParams
 } from "react-router-dom";
@@ -33,25 +34,25 @@ import HomepageHeading from '../../pages/homepage/homepage-heading';
 import {withRouter} from 'react-router';
 
 /**
- * 
+ *
  * @author Alexandra Marlette
  */
 class MobileContainer extends Component {
     state = {};
-  
+
     handlePusherClick = () => {
       const { sidebarOpened } = this.state;
-  
+
       if (sidebarOpened) this.setState({ sidebarOpened: false });
     };
-  
+
     handleToggle = () =>
       this.setState({ sidebarOpened: !this.state.sidebarOpened });
-  
+
     render() {
       const { children } = this.props;
       const { sidebarOpened } = this.state;
-  
+
       return (
         <Responsive maxWidth={Responsive.onlyMobile.maxWidth}>
           <Sidebar.Pushable>
@@ -62,18 +63,19 @@ class MobileContainer extends Component {
               vertical
               visible={sidebarOpened}
             >
-              <Router>
-              <Menu.Item as={Link} to="/" active>
-                Home
-              </Menu.Item>
-              <Menu.Item as={Link} to="#aboutus">About Us</Menu.Item>
-              <Menu.Item as={Link} to="/mentalmaintenance">Mental Maintenance</Menu.Item>
-              <Menu.Item as={Link} to="/outsidehelp">Outside Help</Menu.Item>
-              
-              <Menu.Item as="a">Emergency Resources</Menu.Item>
+              <Router forceRefresh = "True">
+                <Menu.Item as={NavLink} exact to="/">
+                  Home
+                </Menu.Item>
+                <Menu.Item as={NavLink} to="/aboutus">About Us</Menu.Item>
+                <Menu.Item as={NavLink} to="/mentalmaintenance">Mental Maintenance</Menu.Item>
+                <Menu.Item as={NavLink} to="/outsidehelp">Outside Help</Menu.Item>
+                <Menu.Item position="right">
+                  <Button color='red' onClick = {() => this.props.history.push("/emergencyresources")}>Emergency Resources</Button>
+                </Menu.Item>
               </Router>
             </Sidebar>
-  
+
             <Sidebar.Pusher
               dimmed={sidebarOpened}
               onClick={this.handlePusherClick}
@@ -97,7 +99,7 @@ class MobileContainer extends Component {
                 </Container>
                 <HomepageHeading mobile />
               </Segment>
-  
+
               {children}
             </Sidebar.Pusher>
           </Sidebar.Pushable>
@@ -105,7 +107,7 @@ class MobileContainer extends Component {
       );
     }
   }
-  
+
   MobileContainer.propTypes = {
     children: PropTypes.node
   };
