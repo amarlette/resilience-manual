@@ -16,18 +16,12 @@ import {
   Menu,
   Responsive,
   Segment,
-  Sidebar,
   Visibility
 } from "semantic-ui-react";
 
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
   NavLink,
-  useRouteMatch,
-  useParams
 } from "react-router-dom";
 
 import HomepageHeading from '../../pages/homepage/homepage-heading';
@@ -49,7 +43,7 @@ class DesktopContainer extends Component {
     render() {
       const { children } = this.props;
       const { fixed } = this.state;
-
+      
       return (
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Visibility
@@ -92,7 +86,7 @@ class DesktopContainer extends Component {
                   </Router>
                 </Container>
               </Menu>
-              <HomepageHeading />
+              <HomepageHeading page={this.props.page} />
             </Segment>
           </Visibility>
 

@@ -32,10 +32,12 @@ import {
 
 import ResponsiveContainer from "../../containers/responsive-container";
 
+
 import Kaban from "./img/kaban.png";
 import TimeBlock from "./img/timeblocking-example.png";
 import Seinfeld from "./img/seinfeld.png";
 import Cornell from "./img/cornell.png";
+
 
 export class MentalMaintenancepage extends React.Component {
 
@@ -226,6 +228,7 @@ export class MentalMaintenancepage extends React.Component {
                     <Container>
                     </Container>
                 </Segment>
+
             </ResponsiveContainer>
         )
     }

@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 
-
 import "../../../../node_modules/semantic-ui-css/semantic.min.css";
 
 import {withRouter} from 'react-router';
@@ -11,7 +10,6 @@ import {
     Container,
     Divider,
     Grid,
-    Card,
     Header,
     Icon,
     Image,
