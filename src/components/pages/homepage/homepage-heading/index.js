@@ -3,6 +3,8 @@ import React from "react";
 
 import "../../../../../node_modules/semantic-ui-css/semantic.min.css";
 
+import * as HEADER_STRINGS from '../../../pages/config/headerstrings';
+
 import {
   Button,
   Container,
@@ -14,11 +16,71 @@ import {
  * such things.
  * @author Alexandra Marlette
  */
+
+
+let primaryHeader = "";
+let secondaryHeader = "";
+
+function populateHeaders(page) {
+    switch(page) {
+  
+      case "home":
+        console.log('here');
+        primaryHeader = HEADER_STRINGS.HOMEPAGE_PRIMARY_HEADER
+        secondaryHeader = HEADER_STRINGS.HOMEPAGE_SECONDARY_HEADER
+  
+      case "aboutus":
+        primaryHeader = HEADER_STRINGS.ABOUTUSPAGE_PRIMARY_HEADER
+        secondaryHeader = HEADER_STRINGS.ABOUTUSPAGE_SECONDARY_HEADER
+  
+      case "mentalmaintenance":
+        primaryHeader = HEADER_STRINGS.MENTALMAINTENANCE_PRIMARY_HEADER
+        secondaryHeader = HEADER_STRINGS.MENTALMAINTENANCE_SECONDARY_HEADER
+  
+      default:
+        primaryHeader = "Primary Header"
+        secondaryHeader = "Secondary Header"
+    }
+}
+
+function getPrimaryHeader(page) {
+    switch(page) {
+        case "home":
+          return HEADER_STRINGS.HOMEPAGE_PRIMARY_HEADER
+    
+        case "aboutus":
+         return HEADER_STRINGS.ABOUTUSPAGE_PRIMARY_HEADER
+    
+        case "mentalmaintenance":
+         return HEADER_STRINGS.MENTALMAINTENANCE_PRIMARY_HEADER
+    
+        default:
+          return "Primary Header"
+    }
+}
+
+function getSecondaryHeader(page) {
+    switch(page) {
+        case "home":
+          return HEADER_STRINGS.HOMEPAGE_SECONDARY_HEADER
+    
+        case "aboutus":
+          return HEADER_STRINGS.ABOUTUSPAGE_SECONDARY_HEADER
+    
+        case "mentalmaintenance":
+          return HEADER_STRINGS.MENTALMAINTENANCE_SECONDARY_HEADER
+    
+        default:
+          return "Secondary Header"
+      }
+}
+
+
 const HomepageHeading = (props, { mobile }) => (
 <Container text>
     <Header
     as="h1"
-    content="Georgia Tech Mental Health Manual"
+    content={getPrimaryHeader(props.page)}
     inverted
     style={{
         fontSize: mobile ? "2em" : "4em",
@@ -29,7 +91,7 @@ const HomepageHeading = (props, { mobile }) => (
     />
     <Header
     as="h2"
-    content="Built by Georgia Tech Students for Georgia Tech Students"
+    content={getSecondaryHeader(props.page)}
     inverted
     style={{
         fontSize: mobile ? "1.5em" : "1.7em",

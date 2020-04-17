@@ -37,7 +37,6 @@ class DesktopContainer extends Component {
       const { children } = this.props;
       const { fixed } = this.state;
       
-      console.log(this.props.page);
       return (
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Visibility
@@ -73,7 +72,7 @@ class DesktopContainer extends Component {
                   </Router>
                 </Container>
               </Menu>
-              <HomepageHeading primaryHeading="test1" secondaryHeading="test2"/>
+              <HomepageHeading page={this.props.page} />
             </Segment>
           </Visibility>
 
