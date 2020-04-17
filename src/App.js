@@ -31,8 +31,12 @@ import {
 import Homepage from './components/pages/homepage';
 import AboutUspage from './components/pages/aboutuspage';
 import MentalMaintenancepage from './components/pages/mentalmaintenancepage';
+import StudySkillspage from './components/pages/studyskillspage';
+import Meditationpage from './components/pages/meditationpage';
+import TimeManagementpage from './components/pages/timemanagementpage';
 import OutsideHelppage from './components/pages/outsidehelppage';
 import EmergencyResourcesPage from './components/pages/emergencyresourcespage'
+import AccommodationsPage from './components/pages/accommodationspage';
 
 export default class App extends React.Component {
 
@@ -41,8 +45,11 @@ export default class App extends React.Component {
       <Router>
         <Switch>
           <Route path='/' exact component={Homepage}/>
-          <Route path='/aboutus' component={AboutUspage}/>
+          <Route path='/accommodations' component={AccommodationsPage}/>
           <Route path='/mentalmaintenance' component={MentalMaintenancepage}/>
+          <Route path='/studyskills' component={StudySkillspage}/>
+          <Route path='/timemanagement' component={TimeManagementpage}/>
+          <Route path='/meditation' component={Meditationpage}/>
           <Route path='/outsidehelp' component={OutsideHelppage}/>
           <Route path='/emergencyresources' component={EmergencyResourcesPage}/>
         </Switch>
