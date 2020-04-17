@@ -1,5 +1,4 @@
-import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React from "react";
 
 import "../../../../node_modules/semantic-ui-css/semantic.min.css";
 
@@ -11,30 +10,16 @@ import {
   Divider,
   Grid,
   Header,
-  Icon,
   Image,
   List,
-  Menu,
-  Responsive,
   Segment,
-  Sidebar,
-  Visibility
 } from "semantic-ui-react";
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
 
 
 import ResponsiveContainer from "../../containers/responsive-container";
 
 const Homepage = () => (
-  <ResponsiveContainer>
+  <ResponsiveContainer page="home">
     <Segment style={{ padding: "8em 0em" }} vertical>
       <Grid container stackable verticalAlign="middle">
         <Grid.Row>

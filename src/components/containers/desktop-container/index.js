@@ -6,27 +6,15 @@ import "../../../../node_modules/semantic-ui-css/semantic.min.css";
 import {
   Button,
   Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
   Menu,
   Responsive,
   Segment,
-  Sidebar,
   Visibility
 } from "semantic-ui-react";
 
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
   NavLink,
-  useRouteMatch,
-  useParams
 } from "react-router-dom";
 
 import HomepageHeading from '../../pages/homepage/homepage-heading';
@@ -48,7 +36,8 @@ class DesktopContainer extends Component {
     render() {
       const { children } = this.props;
       const { fixed } = this.state;
-
+      
+      console.log(this.props.page);
       return (
         <Responsive minWidth={Responsive.onlyTablet.minWidth}>
           <Visibility
@@ -84,7 +73,7 @@ class DesktopContainer extends Component {
                   </Router>
                 </Container>
               </Menu>
-              <HomepageHeading />
+              <HomepageHeading primaryHeading="test1" secondaryHeading="test2"/>
             </Segment>
           </Visibility>
 

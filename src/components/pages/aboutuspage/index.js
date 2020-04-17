@@ -36,7 +36,7 @@ export class AboutUspage extends React.Component {
 
     render() {
         return (
-            <ResponsiveContainer>
+            <ResponsiveContainer page="aboutus">
                 <h2>About us page!</h2>
             </ResponsiveContainer>
         )

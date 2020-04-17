@@ -37,7 +37,7 @@ export class MentalMaintenancepage extends React.Component {
 
     render() {
         return (
-            <ResponsiveContainer>
+            <ResponsiveContainer page="mentalmaintenance">
                 <h2>Mental Maintenance page!</h2>
             </ResponsiveContainer>
         )

@@ -31,10 +31,10 @@ import {
 import DesktopContainer from '../desktop-container';
 import MobileContainer from '../mobile-container';
 
-const ResponsiveContainer = ({ children }) => (
+const ResponsiveContainer = (props, { children }) => (
     <div>
-        <DesktopContainer>{children}</DesktopContainer>
-        <MobileContainer>{children}</MobileContainer>
+        <DesktopContainer page={props.page}>{children}</DesktopContainer>
+        <MobileContainer page={props.page}>{children}</MobileContainer>
     </div>
 );
 

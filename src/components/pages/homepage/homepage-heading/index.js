@@ -1,34 +1,20 @@
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React from "react";
 
 import "../../../../../node_modules/semantic-ui-css/semantic.min.css";
 
 import {
   Button,
   Container,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Responsive,
-  Segment,
-  Sidebar,
+  Header
 } from "semantic-ui-react";
-
-import {
-  BrowserRouter as Router,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
 
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  * @author Alexandra Marlette
  */
-const HomepageHeading = ({ mobile }) => (
+const HomepageHeading = (props, { mobile }) => (
 <Container text>
     <Header
     as="h1"
