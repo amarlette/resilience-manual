@@ -44,6 +44,22 @@ function populateHeaders(page) {
       case "timemanagement":
         primaryHeader = HEADER_STRINGS.TIMEMANAGEMENT_PRIMARY_HEADER
         secondaryHeader = HEADER_STRINGS.TIMEMANAGEMENT_SECONDARY_HEADER
+
+      case "meditation":
+      primaryHeader = HEADER_STRINGS.MEDITATION_PRIMARY_HEADER
+      secondaryHeader = HEADER_STRINGS.MEDITATION_SECONDARY_HEADER
+
+      case "outsidehelp":
+      primaryHeader = HEADER_STRINGS.OUTSIDEHELP_PRIMARY_HEADER
+      secondaryHeader = HEADER_STRINGS.OUTSIDEHELP_SECONDARY_HEADER
+
+      case "accommodations":
+        primaryHeader = HEADER_STRINGS.ACCOMMODATIONS_PRIMARY_HEADER
+        secondaryHeader = HEADER_STRINGS.ACCOMMODATIONS_SECONDARY_HEADER
+    
+      case "emergencyresources":
+        primaryHeader = HEADER_STRINGS.EMERGENCYRESOURCES_PRIMARY_HEADER
+        secondaryHeader = HEADER_STRINGS.EMERGENCYRESOURCES_SECONDARY_HEADER
   
       default:
         primaryHeader = "Primary Header"
@@ -67,6 +83,18 @@ function getPrimaryHeader(page) {
 
         case "timemanagement":
           return HEADER_STRINGS.TIMEMANAGEMENT_PRIMARY_HEADER
+
+        case "meditation":
+          return HEADER_STRINGS.MEDITATION_PRIMARY_HEADER
+
+        case "outsidehelp":
+          return HEADER_STRINGS.OUTSIDEHELP_PRIMARY_HEADER
+
+        case "accommodations":
+          return HEADER_STRINGS.ACCOMMODATIONS_PRIMARY_HEADER
+
+        case "emergencyresources":
+          return HEADER_STRINGS.EMERGENCYRESOURCES_PRIMARY_HEADER
     
         default:
           return "Primary Header"
@@ -89,6 +117,18 @@ function getSecondaryHeader(page) {
 
         case "timemanagement":
           return HEADER_STRINGS.TIMEMANAGEMENT_SECONDARY_HEADER
+
+        case "meditation":
+          return HEADER_STRINGS.MEDITATION_SECONDARY_HEADER
+
+        case "outsidehelp":
+          return HEADER_STRINGS.OUTSIDEHELP_SECONDARY_HEADER
+
+        case "accommodations":
+          return HEADER_STRINGS.ACCOMMODATIONS_SECONDARY_HEADER
+
+        case "emergencyresources":
+          return HEADER_STRINGS.EMERGENCYRESOURCES_SECONDARY_HEADER
     
         default:
           return "Secondary Header"
@@ -119,11 +159,11 @@ const HomepageHeading = (props, { mobile }) => (
         marginTop: mobile ? "0.5em" : "1.5em"
     }}
     />
-    <Button.Group size='large'>
+    {/* <Button.Group size='large'>
     <Button color="yellow">Mental Maintenance</Button>
     <Button.Or />
     <Button color="blue">Get Outside Help</Button>
-</Button.Group>
+</Button.Group> */}
 </Container>
 );
   

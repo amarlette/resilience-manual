@@ -38,7 +38,7 @@ export class AccommodationsPage extends React.Component {
 
     render() {
         return (
-            <ResponsiveContainer>
+            <ResponsiveContainer page = "accommodations">
                 <h2>Accommodations Page!</h2>
 
             </ResponsiveContainer>
