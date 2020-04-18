@@ -41,7 +41,7 @@ export class MentalMaintenancepage extends React.Component {
 
     render() {
         return (
-            <ResponsiveContainer>
+            <ResponsiveContainer page="studyskills">
                 <Container text style={{ marginTop: "4em" }}>
                 <Header as="h1">Study Skills</Header><br></br>
                 <Header as='h2' attached='top'>The Pomodoro Technique</Header>

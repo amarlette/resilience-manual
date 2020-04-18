@@ -92,7 +92,7 @@ class DesktopContainer extends Component {
                   </Router>
                 </Container>
               </Menu>
-              <HomepageHeading />
+              <HomepageHeading page={this.props.page}/>
             </Segment>
           </Visibility>
 

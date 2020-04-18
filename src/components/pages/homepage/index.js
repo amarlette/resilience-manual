@@ -35,7 +35,7 @@ import {
 import ResponsiveContainer from "../../containers/responsive-container";
 
 const Homepage = () => (
-  <ResponsiveContainer>
+  <ResponsiveContainer page="home">
     <Container text style={{ marginTop: "4em" }}>
         <Header as="h1">About Us</Header>
         <p>

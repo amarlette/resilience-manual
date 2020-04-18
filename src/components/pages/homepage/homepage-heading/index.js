@@ -1,38 +1,106 @@
 import PropTypes from "prop-types";
-import React, { Component } from "react";
+import React from "react";
 
 import "../../../../../node_modules/semantic-ui-css/semantic.min.css";
+
+import * as HEADER_STRINGS from '../../../pages/config/headerstrings';
 
 import {
   Button,
   Container,
-  Header,
-  Icon,
-  Image,
-  List,
-  Menu,
-  Responsive,
-  Segment,
-  Sidebar,
+  Header
 } from "semantic-ui-react";
 
-import {
-  BrowserRouter as Router,
-  Link,
-  useRouteMatch,
-  useParams
-} from "react-router-dom";
 
-/* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
  * @author Alexandra Marlette
  */
-const HomepageHeading = ({ mobile }) => (
+
+
+let primaryHeader = "";
+let secondaryHeader = "";
+
+function populateHeaders(page) {
+    switch(page) {
+  
+      case "home":
+        console.log('here');
+        primaryHeader = HEADER_STRINGS.HOMEPAGE_PRIMARY_HEADER
+        secondaryHeader = HEADER_STRINGS.HOMEPAGE_SECONDARY_HEADER
+
+      case "aboutus":
+        primaryHeader = HEADER_STRINGS.ABOUTUSPAGE_PRIMARY_HEADER
+        secondaryHeader = HEADER_STRINGS.ABOUTUSPAGE_SECONDARY_HEADER
+  
+      case "mentalmaintenance":
+        primaryHeader = HEADER_STRINGS.MENTALMAINTENANCE_PRIMARY_HEADER
+        secondaryHeader = HEADER_STRINGS.MENTALMAINTENANCE_SECONDARY_HEADER
+      
+      case "studyskills":
+        primaryHeader = HEADER_STRINGS.STUDYSKILLS_PRIMARY_HEADER
+        secondaryHeader = HEADER_STRINGS.STUDYSKILLS_SECONDARY_HEADER
+        
+      case "timemanagement":
+        primaryHeader = HEADER_STRINGS.TIMEMANAGEMENT_PRIMARY_HEADER
+        secondaryHeader = HEADER_STRINGS.TIMEMANAGEMENT_SECONDARY_HEADER
+  
+      default:
+        primaryHeader = "Primary Header"
+        secondaryHeader = "Secondary Header"
+    }
+}
+
+function getPrimaryHeader(page) {
+    switch(page) {
+        case "home":
+          return HEADER_STRINGS.HOMEPAGE_PRIMARY_HEADER
+    
+        case "aboutus":
+         return HEADER_STRINGS.ABOUTUSPAGE_PRIMARY_HEADER
+    
+        case "mentalmaintenance":
+         return HEADER_STRINGS.MENTALMAINTENANCE_PRIMARY_HEADER
+
+        case "studyskills":
+          return HEADER_STRINGS.STUDYSKILLS_PRIMARY_HEADER
+
+        case "timemanagement":
+          return HEADER_STRINGS.TIMEMANAGEMENT_PRIMARY_HEADER
+    
+        default:
+          return "Primary Header"
+    }
+}
+
+function getSecondaryHeader(page) {
+    switch(page) {
+        case "home":
+          return HEADER_STRINGS.HOMEPAGE_SECONDARY_HEADER
+    
+        case "aboutus":
+          return HEADER_STRINGS.ABOUTUSPAGE_SECONDARY_HEADER
+    
+        case "mentalmaintenance":
+          return HEADER_STRINGS.MENTALMAINTENANCE_SECONDARY_HEADER
+
+        case "studyskills":
+          return HEADER_STRINGS.STUDYSKILLS_SECONDARY_HEADER
+
+        case "timemanagement":
+          return HEADER_STRINGS.TIMEMANAGEMENT_SECONDARY_HEADER
+    
+        default:
+          return "Secondary Header"
+      }
+}
+
+
+const HomepageHeading = (props, { mobile }) => (
 <Container text>
     <Header
     as="h1"
-    content="Georgia Tech Mental Health Manual"
+    content={getPrimaryHeader(props.page)}
     inverted
     style={{
         fontSize: mobile ? "2em" : "4em",
@@ -43,7 +111,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
     as="h2"
-    content="Built by Georgia Tech Students for Georgia Tech Students"
+    content={getSecondaryHeader(props.page)}
     inverted
     style={{
         fontSize: mobile ? "1.5em" : "1.7em",

@@ -41,7 +41,7 @@ export class MentalMaintenancepage extends React.Component {
 
     render() {
         return (
-            <ResponsiveContainer>
+            <ResponsiveContainer page ="timemanagement">
                 <Container text style={{ marginTop: "4em" }}>
                     <Header as="h1">Time Management Skills & Techniques</Header><br></br>
                     <Header as="h2">Time Management Skills</Header>
