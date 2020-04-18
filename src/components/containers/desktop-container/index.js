@@ -6,13 +6,6 @@ import "../../../../node_modules/semantic-ui-css/semantic.min.css";
 import {
   Button,
   Container,
-  Divider,
-  Grid,
-  Header,
-  Icon,
-  Image,
-  List,
-  Dropdown,
   Menu,
   Responsive,
   Segment,
@@ -70,19 +63,12 @@ class DesktopContainer extends Component {
                     <Menu.Item as={NavLink} exact to="/">
                       Home
                     </Menu.Item>
-                    <Dropdown item text='Mental Maintenance'>
-                    <Dropdown.Menu>
-                      <Dropdown.Item as={NavLink} to="/studyskills">Study Skills</Dropdown.Item>
-                      <Dropdown.Item as={NavLink} to="/timemanagement">Time Management</Dropdown.Item>
-                      <Dropdown.Item as={NavLink} to="/meditation">Meditation</Dropdown.Item>
-                    </Dropdown.Menu>
-                  </Dropdown>
+                    <Menu.Item as={NavLink} to="/aboutus">About Us</Menu.Item>
+                    <Menu.Item as={NavLink} to="/mentalmaintenance">Mental Maintenance</Menu.Item>
                     <Menu.Item as={NavLink} to="/outsidehelp">Outside Help</Menu.Item>
-                    <Menu.Item as={NavLink} to="/accommodations">Accommodations</Menu.Item>
                     <Menu.Item position="right">
-                    <Link to='/emergencyresources'>
-                      <Button color='red'>Emergency Resources</Button>
-                    </Link>                    </Menu.Item>
+                      <Button color='red' onClick = {() => this.props.history.push("/emergencyresources")}>Emergency Resources</Button>
+                    </Menu.Item>
                   </Router>
                 </Container>
               </Menu>
