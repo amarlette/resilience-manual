@@ -37,7 +37,7 @@ export class OutsideHelppage extends React.Component {
 
     render() {
         return (
-            <ResponsiveContainer page="outsidehelp">
+            <ResponsiveContainer>
                 <h2>Outside Help page!</h2>
             </ResponsiveContainer>
         )
