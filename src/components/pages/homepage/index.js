@@ -49,9 +49,9 @@ const Homepage = () => (
                 <Card.Content header='Mental Maintenance' />
                 <Card.Content description='Stress is common among college students. If you are looking for factors causing college stress.'/>
                 <Card.Content extra>
-                <Link to='/mentalmaintenance'>
+                {/* <Link to='/mentalmaintenance'>
                     <Button color='yellow'>Click Here</Button>
-                </Link>
+                </Link> */}
                 </Card.Content>
             </Card>
 
@@ -61,7 +61,7 @@ const Homepage = () => (
                 <Card.Content header='Emergency Resources' />
                 <Card.Content description='If you are looking for emergency services.'/>
                 <Card.Content extra>
-                <Button color='yellow'>Click Here</Button>
+                {/* <Button color='yellow'>Click Here</Button> */}
                 </Card.Content>
             </Card>
             </Grid.Column>
@@ -75,7 +75,7 @@ const Homepage = () => (
                 <Card.Content header='Getting Help' />
                 <Card.Content description='Georgia Tech values mental health as one of its major responsibilities. It offers general services that are accessible in our daily lives.'/>
                 <Card.Content extra>
-                <Button color='yellow'>Click Here</Button>
+                {/* <Button color='yellow'>Click Here</Button> */}
                 </Card.Content>
             </Card>
             </Grid.Column>
@@ -84,7 +84,7 @@ const Homepage = () => (
                 <Card.Content header='Mental Health + Disability' />
                 <Card.Content description='Disability is also a major source of mental health problem. If you are looking for services for disabilities'/>
                 <Card.Content extra>
-                <Button color='yellow'>Click Here</Button>
+                {/* <Button color='yellow'>Click Here</Button> */}
                 </Card.Content>
             </Card>
             </Grid.Column>

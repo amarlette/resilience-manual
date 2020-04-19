@@ -45,7 +45,7 @@ export class MentalMaintenancepage extends React.Component {
                 <Container text style={{ marginTop: "4em" }}>
                 <Header as="h1">Study Skills</Header><br></br>
                 <Header as='h2' attached='top'>The Pomodoro Technique</Header>
-                <Segment attached>
+                <Segment attached='bottom'>
                 <p>The essence of the Pomodoro Technique is <strong>to work with time, instead of struggling against it.</strong> It is a time management system invented for the sole purpose of avoiding a race against the clock when it comes to assignment completion and deadlines.</p>
 
                 <Grid stackable columns={2}>
@@ -93,7 +93,9 @@ export class MentalMaintenancepage extends React.Component {
                                 </ul>
                             </Grid.Column>
                             <Grid.Column width={8}>
-                            <Image src={Cornell}/>
+                            <Image src={Cornell} alt="Cornell Notetaking Method Image:
+                                A piece of lined paper with some notes taken using the Cornell notetaking method that summarize and explain Mordor, a fictional location from 'The Lord of the Rings'. The cues are in the margin on the left side of the paper, the notes section is on the right side of the paper, and the summary is at the bottom of the page.
+                                "/>
                             </Grid.Column>
                         </Grid.Row>
 

@@ -51,11 +51,11 @@ const HomepageHeading = ({ mobile }) => (
         marginTop: mobile ? "0.5em" : "1.5em"
     }}
     />
-    <Button.Group size='large'>
+    {/* <Button.Group size='large'>
     <Button color="yellow">Mental Maintenance</Button>
     <Button.Or />
     <Button color="blue">Get Outside Help</Button>
-</Button.Group>
+</Button.Group> */}
 </Container>
 );
   
