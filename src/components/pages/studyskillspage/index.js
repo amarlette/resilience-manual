@@ -114,11 +114,7 @@ export class MentalMaintenancepage extends React.Component {
                         <li>Begin a session (note that you can use a Pomodoro timer for this!). </li>
                         <li>Remember to take short breaks between the sessions, and longer breaks every 5 sessions. </li>
                     </ul>
-                </Segment>
-                    
-
-
-                    
+                </Segment>    
                 </Container>
                 <Segment inverted vertical style={{ marginTop: "4em", padding: "3em" }}>
                     <Container>
