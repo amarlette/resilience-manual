@@ -61,7 +61,7 @@ export class AccommodationsPage extends React.Component {
                         <Segment color='yellow'><strong>Systemic Disorders: </strong> 
                         Conditions affecting one or more of the body’s systems, which can include the respiratory, immunological neurological, circulatory, or digestive systems. <br></br>
                         </Segment>
-                        <Segment color='yellow'><strong>Communications Disorders: </strong> 
+                        <Segment color='blue'><strong>Communications Disorders: </strong> 
                         A general term that refers to a heterogeneous group of disorders manifested by significant difficulties in language, speech, and/or communication. This includes difficulties in receptive and expressive language (i.e. production of sounds, articulation and fluency deficits), difficulty in the acquisition and production of language across modalities (i.e., spoken, written), and difficulties in the social use of verbal and nonverbal communication.<br></br>
                         </Segment>
                     </div>
