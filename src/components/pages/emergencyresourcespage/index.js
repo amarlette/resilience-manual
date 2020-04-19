@@ -96,6 +96,64 @@ export class EmergencyResourcesPage extends React.Component {
                             </div>
                         </Grid.Column>
                     </Grid>
+
+                    <Header as='h1'>National Emergency Hotlines</Header>
+                    <Grid stackable columns={2}>
+                        <Grid.Column>
+                        <div>
+                            <Header as='h2' attached='top'>National/Local Emergency Services</Header>
+                                <Segment attached='bottom'>
+                                <p>
+                                    <strong>Hotline:</strong> 911 (call only)<br></br> 
+                                    <strong>Website:</strong><a href="https://www.911.gov/needtocallortext911.html">https://www.911.gov/needtocallortext911.html</a><br></br>
+                                    Contact this number if you are facing a life-threatening circumstance requiring the assistance of law enforcement (i.e. police), medical assistance, or firefighting assistance. 
+                                    <br></br>
+                                </p>
+                                </Segment>
+                            </div>
+                        </Grid.Column>
+                        <Grid.Column>
+                        <div>
+                            <Header as='h2' attached='top'>National Suicide Prevention </Header>
+                                <Segment attached='bottom'>
+                                <p>
+                                    <strong>Hotline:</strong> 1-800-273-8255 (call only)<br></br> 
+                                    <strong>Website:</strong><a href="https://suicidepreventionlifeline.org">https://suicidepreventionlifeline.org</a><br></br>
+                                    <strong>Related Chat Service: </strong><a href="http://www.contact-usa.org/chat.html">http://www.contact-usa.org/chat.html</a><br></br>
+                                    Emergency hotline to get in contact with free and confidential emotional support for someone who is struggling with thoughts of suicide. This organization aids with preventing distress and crisis situations. Has an emergency contact chat as an alternative to calling reachable at <a href="https://suicidepreventionlifeline.org/chat/">https://suicidepreventionlifeline.org/chat/</a>
+                                    <br></br>
+                                </p>
+                                </Segment>
+                            </div>
+                        </Grid.Column>
+                        <Grid.Column>
+                        <div>
+                            <Header as='h2' attached='top'>The Trevor Lifeline Project</Header>
+                                <Segment attached='bottom'>
+                                <p>
+                                    <strong>Hotline:</strong> 1-866-488-7386 (call only) <br></br> 
+                                    <strong>Website:</strong><a href="https://www.thetrevorproject.org">https://www.thetrevorproject.org</a><br></br>
+                                    <strong>Related Chat Service: </strong><a href="https://www.thetrevorproject.org/get-help-now/">https://www.thetrevorproject.org/get-help-now/</a><br></br>
+                                    <strong>Texting only: </strong> Text START to 678678<br></br>
+                                    Leading national organizer that specializes in providing crisis intervention and suicide prevention services to lesbian, gay, bisexual, transgender, queer, and questioning (LGBTQ) young adults.  
+                                    <br></br>
+                                </p>
+                                </Segment>
+                            </div>
+                            </Grid.Column>
+                            <Grid.Column>
+                            <div>
+                            <Header as='h2' attached='top'>Mentalhealth.gov </Header>
+                                <Segment attached='bottom'>
+                                <p>
+                                    <strong>Phone Contact:</strong> 404-894-9980<br></br> 
+                                    <strong>Website:</strong><a href="https://www.mentalhealth.gov/what-to-look-for"> https://www.mentalhealth.gov/what-to-look-for</a><br></br>
+                                    An informative resource that gives a list of different disorders associated with mental health. Is useful in providing a basic explanation of what difficulties people may be experiencing in terms of their mental health. <br></br>
+                                </p>
+                                </Segment>
+                            </div>
+                        </Grid.Column>
+                    </Grid>
                 </Container>
 
                 <Segment inverted vertical style={{ marginTop: "4em", padding: "3em" }}>
