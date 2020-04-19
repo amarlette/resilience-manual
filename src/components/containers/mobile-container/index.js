@@ -95,9 +95,9 @@ class MobileContainer extends Component {
                     <Menu.Item onClick={this.handleToggle}>
                       <Icon name="sidebar" />
                     </Menu.Item>
-                    <Menu.Item position="right">
+                    {/* <Menu.Item position="right">
                     <Button color='red'>Emergency Resources</Button>
-                    </Menu.Item>
+                    </Menu.Item> */}
                   </Menu>
                 </Container>
                 <HomepageHeading mobile />
