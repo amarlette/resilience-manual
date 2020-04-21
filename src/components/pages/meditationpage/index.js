@@ -31,7 +31,7 @@ import {
 } from "react-router-dom";
 
 import ResponsiveContainer from "../../containers/responsive-container";
-import Audio from "../../audio-player";
+import ReactAudioPlayer from 'react-audio-player';
 
 
 import Kaban from "./img/kaban.png";
@@ -40,7 +40,6 @@ import Seinfeld from "./img/seinfeld.png";
 import MeditationLogo from "./img/gt-meditation-logo.png";
 
 
-const Meditation1 = "./audio-files/blah.mp3";
 
 export class MentalMaintenancepage extends React.Component {
     
@@ -66,10 +65,28 @@ export class MentalMaintenancepage extends React.Component {
                     <br></br>
                     We have collaborated with the GT Meditation Club to get you two sample meditation sessions that you can follow along with anytime you need it! 
                     <Header as="h3">Mindfulness Meditation Practice (10 minutes)</Header><br></br>
-                        <div id="audio_div"></div>
+                    What is Mindfulness Meditation? <br></br>
+                    <ReactAudioPlayer
+                    src="https://drive.google.com/uc?id=1pNq8wSOX74FbkIppEHJ8spA6OF-9YFP3"
+                    controls
+                    />                  
+                    <br></br>Practice: <br></br>
+                    <ReactAudioPlayer
+                    src="https://drive.google.com/uc?id=110Zdyf1B0_7_RZIhxaWOESF2jPVK709i"
+                    controls
+                    />
                     <Header as="h3">Mindfulness Breathing Meditation Practice (15 minutes)</Header><br></br>
-
-                    <Audio file={Meditation1}></Audio>
+                    How to practice Mindfulness Breathing? <br></br>
+                    <ReactAudioPlayer
+                    src="https://drive.google.com/uc?id=19zGX14-q7aLQkEIj4UiwieIry6Lkxwhs"
+                    controls
+                    />
+                    
+                    <br></br>Practice: <br></br>
+                    <ReactAudioPlayer
+                    src="https://drive.google.com/uc?id=1PIZjbpeGygSKdebHmFsNbisaTXW0D2Iw"
+                    controls
+                    />
                 </Container>
 
                 <Segment inverted vertical style={{ marginTop: "4em", padding: "3em" }}>
@@ -80,5 +97,5 @@ export class MentalMaintenancepage extends React.Component {
         )
     }
 }
-
+//"http://www.nihilus.net/soundtracks/Static%20Memories.mp3"
 export default withRouter(MentalMaintenancepage);
