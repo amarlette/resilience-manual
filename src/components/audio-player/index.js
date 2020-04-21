@@ -6,7 +6,7 @@ class Audio extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            player: false
+            player: false,
         }
     }
 

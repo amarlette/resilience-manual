@@ -40,6 +40,8 @@ import Seinfeld from "./img/seinfeld.png";
 import MeditationLogo from "./img/gt-meditation-logo.png";
 
 
+const Meditation1 = "./audio-files/blah.mp3";
+
 export class MentalMaintenancepage extends React.Component {
     
 
@@ -67,7 +69,7 @@ export class MentalMaintenancepage extends React.Component {
                         <div id="audio_div"></div>
                     <Header as="h3">Mindfulness Breathing Meditation Practice (15 minutes)</Header><br></br>
 
-                    <Audio></Audio>
+                    <Audio file={Meditation1}></Audio>
                 </Container>
 
                 <Segment inverted vertical style={{ marginTop: "4em", padding: "3em" }}>
